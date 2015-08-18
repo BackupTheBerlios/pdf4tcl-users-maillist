@@ -1,0 +1,34 @@
+From zod at alkohol.ee  Wed Mar  4 15:10:55 2009
+From: zod at alkohol.ee (Siim Salonen)
+Date: Wed, 4 Mar 2009 16:10:55 +0200
+Subject: [Pdf4tcl-users] tables
+Message-ID: <432047230903040610q40dc6cey9b83538047443cfd@mail.gmail.com>
+
+Created little function to help creating tables.
+Currently i added this to pdf4tcl namespace as method but it can be
+easily converted to separate function.
+At moment lot of things hardcoded and hopefully in some day they can
+be changed via args.
+for using this extension line must be added after "snit::type
+pdf4tcl::pdf4tcl {"
+source /path_to_tcl_package/table.tcl
+
+probably its easier to use package require but i'm using older
+aolserver so its easier for me to just source files.
+
+example:
+- - - -
+set str "<tr><td>bla</td><td>komm</td></tr><tr><td>asd</td><td>hjgkljlkj</td></tr>"
+set str [mypdf html2table $str]
+mypdf create_pdf_table $str
+- - - -
+or just
+set str { { bla } { komm } } { { asd } { hjgkljlkj } }
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: table.tcl
+Type: application/x-tcl
+Size: 5909 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/pdf4tcl-users/attachments/20090304/e6ef3505/attachment.tcl>
+

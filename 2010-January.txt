@@ -1,0 +1,18 @@
+From peter.spjuth at gmail.com  Sat Jan 30 00:31:28 2010
+From: peter.spjuth at gmail.com (Peter Spjuth)
+Date: Sat, 30 Jan 2010 00:31:28 +0100
+Subject: [Pdf4tcl-users] Release 0.7
+Message-ID: <d2bfa36f1001291531l7f43b30by36153e5e849e5810@mail.gmail.com>
+
+After far too long, 0.7 is out.
+http://pdf4tcl.berlios.de/changes.html
+
+Thanks to:
+Yaroslav Schekin
+Kevin Partin
+Martin Walcher
+for constributions. I hope I didn't forget someone...
+
+/Peter
+
+

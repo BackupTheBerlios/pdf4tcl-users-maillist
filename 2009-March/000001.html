@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Pdf4tcl-users] tables
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/pdf4tcl-users/2009-March/index.html" >
+   <LINK REL="made" HREF="mailto:pdf4tcl-users%40lists.berlios.de?Subject=Re%3A%20%5BPdf4tcl-users%5D%20tables&In-Reply-To=%3C432047230903040610q40dc6cey9b83538047443cfd%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Pdf4tcl-users] tables</H1>
+    <B>Siim Salonen</B> 
+    <A HREF="mailto:pdf4tcl-users%40lists.berlios.de?Subject=Re%3A%20%5BPdf4tcl-users%5D%20tables&In-Reply-To=%3C432047230903040610q40dc6cey9b83538047443cfd%40mail.gmail.com%3E"
+       TITLE="[Pdf4tcl-users] tables">zod at alkohol.ee
+       </A><BR>
+    <I>Wed Mar  4 15:10:55 CET 2009</I>
+    <P><UL>
+        
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1">[ date ]</a>
+              <a href="thread.html#1">[ thread ]</a>
+              <a href="subject.html#1">[ subject ]</a>
+              <a href="author.html#1">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Created little function to help creating tables.
+Currently i added this to pdf4tcl namespace as method but it can be
+easily converted to separate function.
+At moment lot of things hardcoded and hopefully in some day they can
+be changed via args.
+for using this extension line must be added after &quot;snit::type
+pdf4tcl::pdf4tcl {&quot;
+source /path_to_tcl_package/table.tcl
+
+probably its easier to use package require but i'm using older
+aolserver so its easier for me to just source files.
+
+example:
+- - - -
+set str &quot;&lt;tr&gt;&lt;td&gt;bla&lt;/td&gt;&lt;td&gt;komm&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;asd&lt;/td&gt;&lt;td&gt;hjgkljlkj&lt;/td&gt;&lt;/tr&gt;&quot;
+set str [mypdf html2table $str]
+mypdf create_pdf_table $str
+- - - -
+or just
+set str { { bla } { komm } } { { asd } { hjgkljlkj } }
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: table.tcl
+Type: application/x-tcl
+Size: 5909 bytes
+Desc: not available
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/pdf4tcl-users/attachments/20090304/e6ef3505/attachment.tcl">https://lists.berlios.de/pipermail/pdf4tcl-users/attachments/20090304/e6ef3505/attachment.tcl</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1">[ date ]</a>
+              <a href="thread.html#1">[ thread ]</a>
+              <a href="subject.html#1">[ subject ]</a>
+              <a href="author.html#1">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/pdf4tcl-users">More information about the Pdf4tcl-users
+mailing list</a><br>
+</body></html>
